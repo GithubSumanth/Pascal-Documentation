@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Overpass:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER START -->
+    <header class="header">
+      <div class="logo-box">
+        <a href="#" class="logo-link"><h1 class="logo">Logo</h1></a>
+      </div>
+      <div class="nav">
+        <ul class="container">
+          <li class="container__list">
+            <a href="#" class="container__link">Home</a>
+          </li>
+          <li class="container__list">
+            <a href="#" class="container__link">Download</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- MAIN START -->
+    <main class="main">
+      <!-- SIDEBAR START -->
+      <ul class="sidebar box">
+        <li class="sidebar__list">
+          <a href="#" class="sidebar__link">Program</a>
+        </li>
+        <li class="sidebar__list">
+          <a href="#" class="sidebar__link">Data Types</a>
+        </li>
+        <li class="sidebar__list">
+          <a href="#" class="sidebar__link">Variable</a>
+        </li>
+        <li class="sidebar__list">
+          <a href="#" class="sidebar__link">Operators</a>
+        </li>
+        <li class="sidebar__list">
+          <a href="#" class="sidebar__link">If Statements</a>
+        </li>
+        <li class="sidebar__list">
+          <a href="#" class="sidebar__link">Loop</a>
+        </li>
+        <li class="sidebar__list">
+          <a href="#" class="sidebar__link">Procedures</a>
+        </li>
+        <li class="sidebar__list">
+          <a href="#" class="sidebar__link">Block</a>
+        </li>
+        <li class="sidebar__list">
+          <a href="#" class="sidebar__link">Declaration Block</a>
+        </li>
+        <li class="sidebar__list">
+          <a href="#" class="sidebar__link">Examples</a>
+        </li>
+      </ul>
+      <!-- SIDEBAR END -->
+      <!-- MAIN BLOCK START -->
+      <div class="main-block box">
+        <!-- SECTION PROGRAM START-->
+        <section class="section section--program">
+          <h1 class="heading margin-bottom-small">Program</h1>
+          <p class="para">
+            A program keyword sets up the global namespace for the program.
+            Program name is any valid identifier. Below is the syntax for
+            defining a Program.
+          </p>
+          <div class="code-block">
+            <pre
+              class="pre"
+            ><code class="code">PROGRAM main; { PROGRAM &lt;program_name&gt;;}</code></pre>
+          </div>
+        </section>
+        <!-- SECTION PROGRAM END -->
+        <!-- SECTION DATA TYPE START-->
+        <section class="section section--program">
+          <h1 class="heading heading--primary margin-bottom-small">
+            Data types
+          </h1>
+          <p class="para">
+            Pascal's Programming language supports for 4 data types.
+          </p>
+
+          <ol class="order-list">
+            <li class="order-list__list">Integer</li>
+            <li class="order-list__list">Real</li>
+            <li class="order-list__list">String</li>
+            <li class="order-list__list">Boolean</li>
+          </ol>
+
+          <h3 class="heading heading--secondary">Integer</h3>
+          <p class="para">
+            An integer can be 0, positive or negative number without decimal
+            point. Below is the example the shows the integer declaration.
+          </p>
+          <div class="code-block margin-bottom-small">
+            <pre class="pre"><code class="code">number := 22;</code></pre>
+          </div>
+
+          <h3 class="heading heading--secondary">Real</h3>
+          <p class="para">
+            Any number with decimal point is a real number. Below is the example
+            the shows the real number declaration.
+          </p>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre"><code class="code">pi := 3.14;</code></pre>
+          </div>
+
+          <h3 class="heading heading--secondary">Integer</h3>
+          <p class="para">
+            An integer can be 0, positive or negative number without decimal
+            point. Below is the example the shows the integer declaration.
+          </p>
+          <div class="code-block margin-bottom-small">
+            <pre class="pre"><code class="code">number := 22;</code></pre>
+          </div>
+
+          <h3 class="heading heading--secondary">String</h3>
+          <p class="para">
+            A string is a group of zero or many characters. String should be
+            wrapped up in single quotes ('). Escape sequence (\) can be used to
+            print single quote(') or backword-slash(\). Below is the example the
+            shows the string declaration.
+          </p>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre"><code class="code">name := 'R V College'; </code>
+<code class="code">student := 'Student\'s Name'; { Student's Name }</code>
+<code class="code">slash = '\\'; { \ }</code></pre>
+          </div>
+
+          <h3 class="heading heading--secondary">Boolean</h3>
+          <p class="para">
+            Boolean can be True or Fasle. Below is the example the shows the
+            Boolean declaration.
+          </p>
+          <div class="code-block margin-bottom-small">
+            <pre class="pre"><code class="code">isValid := True;</code>
+<code class="code">isNew := False;</code></pre>
+          </div>
+
+          <h3 class="heading heading--secondary">All Data types</h3>
+          <p class="para">
+            Below is the code example that shows the variable declaration and
+            usage for all the data-types
+          </p>
+          <div class="code-block margin-bottom-small">
+            <pre class="pre"><code class="code">{ Data types }</code>
+<code class="code">PROGRAM dataTypes;</code>
+<code class="code">VAR</code>
+<code class="code">     name : STRING;</code>
+<code class="code">     age : INTEGER;</code>
+<code class="code">     salary : REAL;</code>
+<code class="code">     isAdult : BOOLEAN;</code>
+<code class="code">BEGIN</code>
+<code class="code">     name := 'Henry';</code>
+<code class="code">     age := 24;</code>
+<code class="code">     salary := 100000.00;</code>
+<code class="code">     isAdult := True;</code>
+<code class="code">     { some code ...}</code>
+<code class="code">END.</code></pre>
+          </div>
+        </section>
+        <!-- SECTION DATA TYPE END -->
+      </div>
+
+      <!-- <div class="code-block">
+          <pre class="pre">
+<code class="code">{ program main }</code>
+<code class="code">PROGRAM main;</code>
+<code class="code">     VAR </code>
+<code class="code">         a : INTEGER;</code>
+<code class="code">         b : STRING;</code>
+<code class="code">         c : BOOLEAN;</code>
+<code class="code">         d : REAL;</code>
+<code class="code">     BEGIN</code>
+<code class="code">         a := 1;</code>
+<code class="code">         b := 'Hello World';</code>
+<code class="code">         c := TRUE;</code>
+<code class="code">         d := 3.14;</code>
+<code class="code">     END.</code></pre>
+        </div>
+      </div> -->
+      <!-- MAIN BLOCK END -->
+    </main>
+    <!-- MAIN END -->
+  </body>
+</html>

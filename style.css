@@ -1,0 +1,260 @@
+/* VARIABLES */
+/* -------------------------------------------------------------------------------- */
+
+:root {
+  --main-heding-color: #06283d;
+  --text-color: #777;
+  --body-font: "Overpass", sans-serif;
+  --main-heading-font: "Lora", serif;
+  --code-font: "Courier Prime", monospace;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+/* DEFAULT CONFIGURATION */
+/* --------------------------------------------------------------------------------- */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  padding: 2rem 2rem 1.5rem;
+  color: var(--text-color);
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1.7rem;
+  letter-spacing: 0.01rem;
+  word-spacing: 0.08rem;
+  font-family: var(--body-font);
+}
+
+/* UTILITIES */
+/* ----------------------------------------------------------------------------------------- */
+
+.margin-bottom-small {
+  margin-bottom: 2rem;
+}
+
+/* HEADER ---> LOGO ---> NAVIGATION */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/* .logo-box {
+  padding: 0 2rem;
+} */
+
+.logo {
+  font-family: var(--main-heading-font);
+  color: var(--main-heding-color);
+}
+
+.logo-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__list {
+  padding: 0 1rem;
+}
+
+.container__link:link,
+.container__link:visited {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  color: #777;
+  font-weight: 400;
+  position: relative;
+}
+
+.container__link::after {
+  content: " ";
+  height: 0.2rem;
+  width: 0;
+  background-color: #1363df;
+  transition: all 0.2s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.container__link:hover::after {
+  width: 100%;
+}
+
+.container__link:hover {
+  color: #1363df;
+}
+
+/* MAIN */
+/* ------------------------------------------------------------------------------------------- */
+
+.main {
+  height: 79vh;
+  max-width: 124rem;
+  margin: 2rem auto 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box {
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  height: 100%;
+}
+
+/* SIDE BAR */
+/* ------------------------------------------------------------------------------------------- */
+.sidebar {
+  width: 20%;
+  list-style: none;
+  overflow-y: scroll;
+  padding: 2.4rem 0;
+}
+
+.sidebar__list {
+}
+
+.sidebar__link:link,
+.sidebar__link:visited {
+  display: inline-block;
+  padding: 1.2rem 2.4rem;
+  width: 100%;
+  text-decoration: none;
+  color: #06283d;
+  transition: all 0.2s;
+}
+
+.sidebar__link:hover {
+  background-color: #dff6ff;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* MAIN BODY */
+/* ------------------------------------------------------------------------------------------ */
+
+.main-block {
+  width: 78.1%;
+  height: 100%;
+  padding: 2.5rem 3rem;
+  overflow-y: scroll;
+}
+
+/* FONTS */
+/* ------------------------------------------------------------------------------------------ */
+
+.heading {
+  font-family: var(--main-heading-font);
+  color: var(--main-heding-color);
+}
+
+.heading--primary {
+  font-size: 3.4rem;
+}
+
+.heading--secondary {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* CONTAINERS */
+/* ------------------------------------------------------------------------------------------ */
+
+.order-list {
+  padding: 1rem 4rem;
+  margin: 1rem 0;
+}
+
+/* .order-list__list {
+  font-size: inherit;
+  word-spacing: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+} */
+
+/* SECTIONS */
+/* ------------------------------------------------------------------------------------------ */
+
+.para {
+  /* font-family: var(--code-font); */
+}
+
+/* CODE BOX */
+/* -------------------------------------------------------------------------------------------- */
+
+.pre {
+  background-color: #06283d;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  counter-reset: line;
+  margin: 2.2rem 0 2.4rem;
+}
+
+.code {
+  counter-increment: line;
+  position: relative;
+  /* display: inline-block; */
+  /* width: 100%; */
+  margin: 0;
+  /* padding: 2rem; */
+  margin-left: 2rem;
+  padding-left: 2rem;
+  /* border-left: 2px solid #fff; */
+  font-family: var(--code-font);
+  font-size: 1.7rem;
+  color: #bbb;
+}
+
+.code::before {
+  content: counter(line);
+  padding-left: 10rem;
+  text-align: left;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.code:before {
+  -webkit-user-select: none;
+}
