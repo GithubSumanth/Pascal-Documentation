@@ -50,6 +50,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  max-width: 123rem;
+  margin: 0 auto;
 }
 
 /* .logo-box {
@@ -75,6 +77,10 @@ body {
 
 .container__list {
   padding: 0 1rem;
+}
+
+.container__list:last-child {
+  padding-right: 0;
 }
 
 .container__link:link,
@@ -103,7 +109,7 @@ body {
 }
 
 .container__link:hover {
-  color: #1363df;
+  color: #06283d;
 }
 
 /* MAIN */
@@ -133,8 +139,19 @@ body {
   padding: 2.4rem 0;
 }
 
-.sidebar__list {
+/* .sidebar__list {
+    position:relative;
 }
+
+.sidebar__list::after {
+    content: " ";
+    height: 100%;
+    width: .4rem;
+    position: absolute;
+    background-color: #06283d;
+    top: 0;
+    left: 0;
+} */
 
 .sidebar__link:link,
 .sidebar__link:visited {
@@ -215,12 +232,19 @@ body {
 /* SECTIONS */
 /* ------------------------------------------------------------------------------------------ */
 
+.section {
+  display: none;
+}
+
 .para {
   /* font-family: var(--code-font); */
 }
 
 /* CODE BOX */
 /* -------------------------------------------------------------------------------------------- */
+.code-block {
+  position: relative;
+}
 
 .pre {
   background-color: #06283d;
@@ -257,4 +281,48 @@ body {
 
 .code:before {
   -webkit-user-select: none;
+}
+
+/* BUTTONS */
+/* ----------------------------------------------------------------------------------------------- */
+.btn-copy {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid #f1f1f1;
+  border-top: none;
+  border-left: none;
+  font-family: var(--body-font);
+  background-color: #06283d;
+  color: #f1f1f1;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.btn-copy:active {
+  transform: translateY(0.2rem);
+}
+
+.topic--active {
+  /* font-weight: 600; */
+  background-color: #dff6ff;
+  /* color: #1363df !important; */
+  position: relative;
+}
+
+.topic--active::after {
+  content: " ";
+  height: 100%;
+  width: 0.3rem;
+  position: absolute;
+  background-color: #1363df;
+  top: 0;
+  left: 0;
+}
+
+.show {
+  display: block;
 }

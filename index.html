@@ -40,57 +40,68 @@
     <main class="main">
       <!-- SIDEBAR START -->
       <ul class="sidebar box">
-        <li class="sidebar__list">
-          <a href="#" class="sidebar__link">Program</a>
+        <li class="sidebar__list" data-id-name="program">
+          <a href="#" class="sidebar__link" data-id-name="program">Program</a>
         </li>
-        <li class="sidebar__list">
-          <a href="#" class="sidebar__link">Data Types</a>
+        <li class="sidebar__list" data-id-name="datatype">
+          <a href="#" class="sidebar__link" data-id-name="datatype"
+            >Data Types</a
+          >
         </li>
-        <li class="sidebar__list">
-          <a href="#" class="sidebar__link">Variable</a>
+        <li class="sidebar__list" data-id-name="variable">
+          <a href="#" class="sidebar__link" data-id-name="variable">Variable</a>
         </li>
-        <li class="sidebar__list">
-          <a href="#" class="sidebar__link">Operators</a>
+        <li class="sidebar__list" data-id-name="operator">
+          <a href="#" class="sidebar__link" data-id-name="operator"
+            >Operators</a
+          >
         </li>
-        <li class="sidebar__list">
-          <a href="#" class="sidebar__link">If Statements</a>
+        <li class="sidebar__list" data-id-name="ifstatement">
+          <a href="#" class="sidebar__link" data-id-name="ifstatement"
+            >If Statements</a
+          >
         </li>
-        <li class="sidebar__list">
-          <a href="#" class="sidebar__link">Loop</a>
+        <li class="sidebar__list" data-id-name="loop">
+          <a href="#" class="sidebar__link" data-id-name="loop">Loop</a>
         </li>
-        <li class="sidebar__list">
-          <a href="#" class="sidebar__link">Procedures</a>
+        <li class="sidebar__list" data-id-name="procedure">
+          <a href="#" class="sidebar__link" data-id-name="procedure"
+            >Procedures</a
+          >
         </li>
-        <li class="sidebar__list">
-          <a href="#" class="sidebar__link">Block</a>
+        <li class="sidebar__list" data-id-name="block">
+          <a href="#" class="sidebar__link" data-id-name="block">Block</a>
         </li>
-        <li class="sidebar__list">
-          <a href="#" class="sidebar__link">Declaration Block</a>
+        <li class="sidebar__list" data-id-name="declarationblock">
+          <a href="#" class="sidebar__link" data-id-name="declarationblock"
+            >Declaration Block</a
+          >
         </li>
-        <li class="sidebar__list">
-          <a href="#" class="sidebar__link">Examples</a>
+        <li class="sidebar__list" data-id-name="examples">
+          <a href="#" class="sidebar__link" data-id-name="examples">Examples</a>
         </li>
       </ul>
       <!-- SIDEBAR END -->
       <!-- MAIN BLOCK START -->
       <div class="main-block box">
         <!-- SECTION PROGRAM START-->
-        <section class="section section--program">
-          <h1 class="heading margin-bottom-small">Program</h1>
+        <section class="section section--program" id="program">
+          <h1 class="heading heading--primary margin-bottom-small">Program</h1>
           <p class="para">
             A program keyword sets up the global namespace for the program.
             Program name is any valid identifier. Below is the syntax for
             defining a Program.
           </p>
-          <div class="code-block">
+          <div class="code-block" id="code-program">
             <pre
               class="pre"
             ><code class="code">PROGRAM main; { PROGRAM &lt;program_name&gt;;}</code></pre>
+            <button class="btn-copy">Copy</button>
           </div>
         </section>
         <!-- SECTION PROGRAM END -->
         <!-- SECTION DATA TYPE START-->
-        <section class="section section--program">
+        <section class="section section--program" id="datatype">
           <h1 class="heading heading--primary margin-bottom-small">
             Data types
           </h1>
@@ -112,6 +123,7 @@
           </p>
           <div class="code-block margin-bottom-small">
             <pre class="pre"><code class="code">number := 22;</code></pre>
+            <button class="btn-copy">Copy</button>
           </div>
 
           <h3 class="heading heading--secondary">Real</h3>
@@ -121,6 +133,7 @@
           </p>
           <div class="code-block magin-bottom-small">
             <pre class="pre"><code class="code">pi := 3.14;</code></pre>
+            <button class="btn-copy">Copy</button>
           </div>
 
           <h3 class="heading heading--secondary">Integer</h3>
@@ -130,6 +143,7 @@
           </p>
           <div class="code-block margin-bottom-small">
             <pre class="pre"><code class="code">number := 22;</code></pre>
+            <button class="btn-copy">Copy</button>
           </div>
 
           <h3 class="heading heading--secondary">String</h3>
@@ -142,7 +156,8 @@
           <div class="code-block magin-bottom-small">
             <pre class="pre"><code class="code">name := 'R V College'; </code>
 <code class="code">student := 'Student\'s Name'; { Student's Name }</code>
-<code class="code">slash = '\\'; { \ }</code></pre>
+<code class="code">slash := '\\'; { \ }</code></pre>
+            <button class="btn-copy">Copy</button>
           </div>
 
           <h3 class="heading heading--secondary">Boolean</h3>
@@ -153,6 +168,7 @@
           <div class="code-block margin-bottom-small">
             <pre class="pre"><code class="code">isValid := True;</code>
 <code class="code">isNew := False;</code></pre>
+            <button class="btn-copy">Copy</button>
           </div>
 
           <h3 class="heading heading--secondary">All Data types</h3>
@@ -175,9 +191,67 @@
 <code class="code">     isAdult := True;</code>
 <code class="code">     { some code ...}</code>
 <code class="code">END.</code></pre>
+            <button class="btn-copy">Copy</button>
           </div>
         </section>
         <!-- SECTION DATA TYPE END -->
+        <!-- SECTION IF STATEMENT START -->
+        <section class="section section-ifStatement" id="ifstatement">
+          <h1 class="heading heading--primary margin-bottom-small">
+            If Statements
+          </h1>
+          <p class="para">
+            If statements are used if there is condition based evaluation is
+            required. Here first the condtion is checked and then its associated
+            code is executed.
+          </p>
+          <p class="para">There are 4 varieties of If statements</p>
+          <ol class="order-list">
+            <li class="order-list__list">if statement</li>
+            <li class="order-list__list">if else statement</li>
+            <li class="order-list__list">
+              if elseif elsif ... elseif statement
+            </li>
+            <li class="order-list__list">if elseif elsif... else statement</li>
+          </ol>
+
+          <div class="code-block margin-bottom-small">
+            <pre class="pre"><code class="code">isValid := True;</code>
+      <code class="code">isNew := False;</code></pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+        </section>
+        <!-- SECTION IF STATEMENT END -->
+
+        <!-- SECTION LOOP START -->
+        <section class="section section--loop" id="loop">
+          <h1 class="heading heading--primary margin-bottom-small">Loop</h1>
+          <p class="para margin-bottom-small">
+            Loop is used to repeatedly execute a group of statements as long as
+            the required condtion is met. Once the condtion fails. If there is
+            else satatement present, then the else block will be executed once.
+            Otherwise the statements after loop will be executed.
+          </p>
+          <p class="para">
+            Below is the code example for using loop in program.
+          </p>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre"><code class="code">PROGRAM loopExample;</code>
+<code class="code">VAR</code>
+<code class="code">     a : INTEGER;</code>
+<code class="code">     b : INTEGER;</code>
+<code class="code">BEGIN</code>
+<code class="code">     a := 0;</code>
+<code class="code">     LOOP IF (a < 5) THEN</code>
+<code class="code">         a := a + 1;</code>
+<code class="code">     ELSE</code>
+<code class="code">         b := 1;</code>
+<code class="code">END.</code>
+</pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+        </section>
+        <!-- SECTION LOOP END -->
       </div>
 
       <!-- <div class="code-block">
@@ -200,5 +274,6 @@
       <!-- MAIN BLOCK END -->
     </main>
     <!-- MAIN END -->
+    <script src="script.js"></script>
   </body>
 </html>
