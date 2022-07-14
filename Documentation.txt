@@ -1,0 +1,96 @@
+Program:
+A program keyword sets up the global namespace for the program. Program name can be any valid identifier. Below is the syntax for defining a Program.
+
+Identifier: 
+Identifiers are symbols used to uniquely identify a program element in the code. 
+
+Data Types:
+Pascal's Programming language supports for 4 data types.
+1. INTEGER
+2. REAL
+3. STRING
+4. BOOLEAN
+
+Below is the code example that defines the declaration of the different data types. All the Variables should be declared at the top before the procedures and the main program block.
+VAR keyword should be used to define the declaration block as shown in the example below.
+
+INTEGER: An integer can be 0, positive or negative number without decimal point. Below is the example the shows the integer declaration.
+
+number := 12;
+
+REAL: Any number with decimal point is a real number. Below is the example the shows the real number declaration.
+
+pi := 3.14;
+
+STRING: A string is a group of zero or many characters. String should be wrapped up in single quotes ('). Escape sequence (\) can be used to print single quote(') or backword-slash(\).
+        Below is the example the shows the string declaration.
+
+name := 'RV College';
+student := 'Student\'s Name';
+slash = '\\';
+
+BOOLEAN: Boolean can be True or Fasle. Below is the example the shows the Boolean declaration.
+
+isValid := True;
+isNew := False;
+
+PROGRAM dataTypes;
+
+VAR
+    name : STRING;
+    age : INTEGER;
+    salary : REAL;
+    isAdult : BOOLEAN;
+
+BEGIN
+    name := 'Henry';
+    age := 24;
+    salary := 100000.00;
+    isAdult := True;
+    { some code ...}
+END.
+
+
+IF Statements
+
+VAR
+    age : INTEGER;
+
+BEGIN
+    IF (age > 18) THEN
+        { Do something }
+    ELSEIF age > 40 THEN { It is not mandatory to warp condition in paranthesis}
+        { Do some Other thing }
+    ELSE
+        { Do this oterwise }
+END.
+
+LOOP:
+Loop is used to repeatedly execute a group of statements as long as the required condtion is met. Once the condtion fails. 
+If there is else satatement present, then the else block will be executed once. Otherwise the statements after loop will be executed.
+
+PROGRAM loopExample;
+
+VAR 
+    a : INTEGER;
+    b : INTEGER;
+
+BEGIN
+    a := 0;
+    LOOP if (a < 5) THEN
+        a := a + 1;
+    ELSE 
+        b := 1;
+END.
+
+
+program name;
+var a : integer; 
+	b : integer; 
+begin 
+	a := 0;
+	
+	if (a < 5) then
+		display('a is less than 5');
+	elseif (a = 5) then
+		display('a is equal to 5');else display('a is greater than 5'); loop if (a < 5) then display('Current value of a: ', a); a := a + 1; loop if (a < 10) then display('Current value of a: ', a); a := a + 1; end.

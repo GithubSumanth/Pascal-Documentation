@@ -248,6 +248,7 @@ body {
 
 .pre {
   background-color: #06283d;
+  /* background-color: #282c34; */
   padding: 2rem;
   border-radius: 0.5rem;
   counter-reset: line;
