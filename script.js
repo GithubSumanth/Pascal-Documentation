@@ -3,6 +3,7 @@
 const copyButtons = document.querySelectorAll(".btn-copy");
 const topicList = document.querySelectorAll(".sidebar__list");
 // let previousTopic = document.querySelector(".sidebar__link-1");
+
 let previousTopic = document.querySelector(".sidebar__link");
 
 let previousOpenSection = document.querySelector(".section");
