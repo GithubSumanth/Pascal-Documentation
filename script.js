@@ -2,11 +2,11 @@
 
 const copyButtons = document.querySelectorAll(".btn-copy");
 const topicList = document.querySelectorAll(".sidebar__list");
-let previousTopic = document.querySelector(".sidebar__link-1");
-// let previousTopic = document.querySelector(".sidebar__link");
+// let previousTopic = document.querySelector(".sidebar__link-1");
+let previousTopic = document.querySelector(".sidebar__link");
 
-// let previousOpenSection = document.querySelector(".section");
-let previousOpenSection = document.querySelector(".section-1");
+let previousOpenSection = document.querySelector(".section");
+// let previousOpenSection = document.querySelector(".section-1");
 
 previousTopic.classList.add("topic--active");
 previousOpenSection.classList.add("show");
