@@ -47,19 +47,35 @@
         <li class="sidebar__list" data-id-name="program">
           <a href="#" class="sidebar__link" data-id-name="program">Program</a>
         </li>
+        <li class="sidebar__list" data-id-name="block">
+          <a href="#" class="sidebar__link" data-id-name="block">Block</a>
+        </li>
+        <li class="sidebar__list" data-id-name="variable">
+          <a href="#" class="sidebar__link" data-id-name="variable"
+            >Variable Declaration</a
+          >
+        </li>
         <li class="sidebar__list" data-id-name="datatype">
           <a href="#" class="sidebar__link" data-id-name="datatype"
             >Data Types</a
           >
         </li>
-        <li class="sidebar__list" data-id-name="variable">
-          <a href="#" class="sidebar__link" data-id-name="variable">Variable</a>
-        </li>
+
         <li class="sidebar__list" data-id-name="operator">
           <a href="#" class="sidebar__link" data-id-name="operator"
             >Operators</a
           >
         </li>
+
+        <li class="sidebar__list" data-id-name="operator">
+          <a
+            href="#"
+            class="sidebar__link sidebar__link-1"
+            data-id-name="operator-precedence"
+            >Operator Precedence</a
+          >
+        </li>
+
         <li class="sidebar__list" data-id-name="ifstatement">
           <a href="#" class="sidebar__link" data-id-name="ifstatement"
             >If Statements</a
@@ -67,19 +83,6 @@
         </li>
         <li class="sidebar__list" data-id-name="loop">
           <a href="#" class="sidebar__link" data-id-name="loop">Loop</a>
-        </li>
-        <li class="sidebar__list" data-id-name="procedure">
-          <a href="#" class="sidebar__link" data-id-name="procedure"
-            >Procedures</a
-          >
-        </li>
-        <li class="sidebar__list" data-id-name="block">
-          <a href="#" class="sidebar__link" data-id-name="block">Block</a>
-        </li>
-        <li class="sidebar__list" data-id-name="declarationblock">
-          <a href="#" class="sidebar__link" data-id-name="declarationblock"
-            >Declaration Block</a
-          >
         </li>
         <li class="sidebar__list" data-id-name="examples">
           <a href="#" class="sidebar__link" data-id-name="examples">Examples</a>
@@ -102,6 +105,14 @@
             ><code class="code">PROGRAM main; { PROGRAM &lt;program_name&gt;;}</code></pre>
             <button class="btn-copy">Copy</button>
           </div>
+          <h3 class="heading heading--secondary">Example</h3>
+          <div class="code-block" id="code-program">
+            <pre class="pre"><code class="code">PROGRAM helloWorld;</code>
+<code class="code">BEGIN</code>
+<code class="code">    display('Hello World!');</code>
+<code class="code">END.</code></pre>
+            <button class="btn-copy">Copy</button>
+          </div>
         </section>
         <!-- SECTION PROGRAM END -->
         <!-- SECTION DATA TYPE START-->
@@ -118,9 +129,10 @@
             <li class="order-list__list">Real</li>
             <li class="order-list__list">String</li>
             <li class="order-list__list">Boolean</li>
+            <li class="order-list__list">Array</li>
           </ol>
 
-          <h3 class="heading heading--secondary">Integer</h3>
+          <h3 class="heading heading--secondary">1. Integer</h3>
           <p class="para">
             An integer can be 0, positive or negative number without decimal
             point. Below is the example the shows the integer declaration.
@@ -130,7 +142,7 @@
             <button class="btn-copy">Copy</button>
           </div>
 
-          <h3 class="heading heading--secondary">Real</h3>
+          <h3 class="heading heading--secondary">2. Real</h3>
           <p class="para">
             Any number with decimal point is a real number. Below is the example
             the shows the real number declaration.
@@ -140,17 +152,7 @@
             <button class="btn-copy">Copy</button>
           </div>
 
-          <h3 class="heading heading--secondary">Integer</h3>
-          <p class="para">
-            An integer can be 0, positive or negative number without decimal
-            point. Below is the example the shows the integer declaration.
-          </p>
-          <div class="code-block margin-bottom-small">
-            <pre class="pre"><code class="code">number := 22;</code></pre>
-            <button class="btn-copy">Copy</button>
-          </div>
-
-          <h3 class="heading heading--secondary">String</h3>
+          <h3 class="heading heading--secondary">3. String</h3>
           <p class="para">
             A string is a group of zero or many characters. String should be
             wrapped up in single quotes ('). Escape sequence (\) can be used to
@@ -164,7 +166,7 @@
             <button class="btn-copy">Copy</button>
           </div>
 
-          <h3 class="heading heading--secondary">Boolean</h3>
+          <h3 class="heading heading--secondary">4. Boolean</h3>
           <p class="para">
             Boolean can be True or Fasle. Below is the example the shows the
             Boolean declaration.
@@ -175,7 +177,21 @@
             <button class="btn-copy">Copy</button>
           </div>
 
-          <h3 class="heading heading--secondary">All Data types</h3>
+          <h3 class="heading heading--secondary">5. Array</h3>
+          <p class="para">
+            Array is collection of values, values can be of any type. Values can
+            be of array type even. Array starts with "[" and ends with "]" and
+            each value in array is seperated by ",". Below is the code that
+            showa the syntax of array declaration.
+          </p>
+          <div class="code-block margin-bottom-small">
+            <pre
+              class="pre"
+            ><code class="code">arr := [1, 'string', 2.00, True, [1,2,3]];</code></pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+
+          <h3 class="heading heading--secondary">Example</h3>
           <p class="para">
             Below is the code example that shows the variable declaration and
             usage for all the data-types
@@ -188,26 +204,337 @@
 <code class="code">     age : INTEGER;</code>
 <code class="code">     salary : REAL;</code>
 <code class="code">     isAdult : BOOLEAN;</code>
+<code class="code">     arr : ARRAY;</code>
 <code class="code">BEGIN</code>
 <code class="code">     name := 'Henry';</code>
 <code class="code">     age := 24;</code>
 <code class="code">     salary := 100000.00;</code>
 <code class="code">     isAdult := True;</code>
-<code class="code">     { some code ...}</code>
+<code class="code">     arr := [name, age, salary, isAdult];</code>
+<code class="code">     display(arr);</code>
 <code class="code">END.</code></pre>
             <button class="btn-copy">Copy</button>
           </div>
         </section>
         <!-- SECTION DATA TYPE END -->
+
+        <!-- SECTION VARIABLE DECLARATION START -->
+        <section class="section section--variable" id="variable">
+          <h1 class="heading heading--primary margin-bottom-small">
+            Variable Declaration
+          </h1>
+          <p class="para">
+            Variable declaration should be done at the top just after defining
+            the program name. Variable Declaration starts with keyword VAR.
+            Syntax for variable declaration is shown below.
+          </p>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre"><code class="code">VAR</code>
+<code class="code">    &lt;variable_name_1&gt; : &lt;type_1&gt;;</code>
+<code class="code">    &lt;variable_name_2&gt;, &lt;variable_name_3&gt; : &lt;type_2&gt;;</code></pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+          <h3 class="heading heading--secondary">Example</h3>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre"><code class="code">PROGRAM varDecl;</code>
+<code class="code">VAR</code>
+<code class="code">     a : INTEGER;</code>
+<code class="code">     b : REAL;</code>
+<code class="code">BEGIN</code>
+<code class="code">     a := 2;</code>
+<code class="code">     b := 3.00;</code>
+<code class="code">     display('a:', a);</code>
+<code class="code">     display('b:', b)</code>
+<code class="code">END.</code>
+</pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+        </section>
+        <!-- SECTION VARIABLE DECLARATION END -->
+
+        <!-- SECTION OPERATOR START -->
+        <section class="section section--operator" id="operator">
+          <h1 class="heading heading--primary margin-bottom-small">
+            Operators
+          </h1>
+          <p class="para">
+            There are 5 types of Operators defined in the language syntax
+          </p>
+
+          <ol class="order-list">
+            <li class="order-list__list">Assignment Operator</li>
+            <li class="order-list__list">Arithmentic Operators</li>
+            <li class="order-list__list">Logical Operators</li>
+            <li class="order-list__list">Comparision Operators</li>
+            <li class="order-list__list">Concatenation Operator</li>
+          </ol>
+
+          <h3 class="heading heading--secondary">1. Assignment Operator</h3>
+          <p class="para">
+            Assignment operator is used to assign a value to a variable. Below
+            code bloack shows the syntax and usage of assignment operator.
+          </p>
+
+          <div class="code-block magin-bottom-small">
+            <pre
+              class="pre"
+            ><code class="code">name := 'Henry' { 'Henry' string value is assigned to variable 'name'}</code></pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+
+          <h3 class="heading heading--secondary">2. Arithmentic Operators</h3>
+          <p class="para">Arithmentic Operator Includes:</p>
+
+          <ol class="order-list">
+            <li class="order-list__list">Unary Operator</li>
+            <li class="order-list__list">Addition ( + )</li>
+            <li class="order-list__list">Subtraction ( - )</li>
+            <li class="order-list__list">Multiplication ( * )</li>
+            <li class="order-list__list">Integer Division ( DIV )</li>
+            <li class="order-list__list">Float Division ( / )</li>
+          </ol>
+
+          <h3 class="heading heading--secondary">Example</h3>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre"><code class="code">{Arithmetic Operators}</code>
+<code class="code"></code>
+<code class="code">PROGRAM arithmeticOperator;</code>
+<code class="code">VAR</code>
+<code class="code">     a,b,c,d,e : INTEGER;</code>
+<code class="code">     x, y, z : REAL;</code>
+<code class="code">BEGIN</code>
+<code class="code">     a := 1;</code>
+<code class="code">     b := 2 + a; 	                 { ADDITION }</code>
+<code class="code">     c := b - a;  	                 { SUBTRACTION }</code>
+<code class="code">     d := b * 5;  	                 { MULTIPLICATION }</code>
+<code class="code">     e := ---++c;	                 { UNARY OPERATOR }</code>
+<code class="code">     x := d DIV b;                  { INTEGER DIVISION }</code>
+<code class="code">     y := x / c;	                 { REAL DIVISION }</code>
+<code class="code"></code>
+<code class="code">     z := (a + b) * c -- d DIV x /3; { COMBINATION }</code>
+<code class="code"></code>
+<code class="code">     display('a:', a, 'b:', b);</code>
+<code class="code">     display('c:', c, 'd:', d);</code>
+<code class="code">     display('x:', x, 'y:', y);</code>
+<code class="code">     display('z:', z);</code>
+<code class="code">END.</code>
+</pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+
+          <h3 class="heading heading--secondary">3. Logical Operators</h3>
+          <p class="para">
+            Logical operators returns Boolean. There are 2 logical operators in
+            the language, they are given below:
+          </p>
+
+          <ol class="order-list">
+            <li class="order-list__list">Logical AND Operator</li>
+            <li class="order-list__list">Logical OR Operator</li>
+          </ol>
+          <h3 class="heading heading--secondary">3.1 Logical AND operator</h3>
+          <p class="para">
+            It returns True if both of the operands are of Truthy value. Below
+            is the truth table diagram for the AND logical operator.
+          </p>
+          <div class="grid">
+            <div class="grid__child table-label--1">T/F</div>
+            <div class="grid__child table-label--2">
+              <p class="table-label">FALSE</p>
+            </div>
+            <div class="grid__child table-label--3">
+              <p class="table-label">TRUE</p>
+            </div>
+            <div class="grid__child table-label--4">
+              <p class="table-label">FALSE</p>
+            </div>
+            <div class="grid__child table-label--5">
+              <p class="table-label">FASLE</p>
+            </div>
+            <div class="grid__child table-label--6">
+              <p class="table-label">FALSE</p>
+            </div>
+            <div class="grid__child table-label--7">
+              <p class="table-label">TRUE</p>
+            </div>
+            <div class="grid__child table-label--8">
+              <p class="table-label">FALSE</p>
+            </div>
+            <div class="grid__child table-label--9">
+              <p class="table-label">TRUE</p>
+            </div>
+          </div>
+
+          <h3 class="heading heading--secondary">3.2 Logical OR operator</h3>
+          <p class="para">
+            It returns True if any of the operands are of Truthy value. Below is
+            the truth table diagram for the OR logical operator.
+          </p>
+          <div class="grid">
+            <div class="grid__child table-label--1">T/F</div>
+            <div class="grid__child table-label--2">
+              <p class="table-label">FALSE</p>
+            </div>
+            <div class="grid__child table-label--3">
+              <p class="table-label">TRUE</p>
+            </div>
+            <div class="grid__child table-label--4">
+              <p class="table-label">FALSE</p>
+            </div>
+            <div class="grid__child table-label--5">
+              <p class="table-label">FALSE</p>
+            </div>
+            <div class="grid__child table-label--6">
+              <p class="table-label">TRUE</p>
+            </div>
+            <div class="grid__child table-label--7">
+              <p class="table-label">TRUE</p>
+            </div>
+            <div class="grid__child table-label--8">
+              <p class="table-label">TRUE</p>
+            </div>
+            <div class="grid__child table-label--9">
+              <p class="table-label">TRUE</p>
+            </div>
+          </div>
+
+          <h3 class="heading heading--secondary">4. Comparision Operator</h3>
+          <p class="para">
+            The result or the final value returned by the comparison operator is
+            a boolean. It can be True or False. Comparision operator Includes:
+          </p>
+
+          <ol class="order-list">
+            <li class="order-list__list">Less than Operator ( &lt;)</li>
+            <li class="order-list__list">
+              Less than or equal Operator( &lt;= )
+            </li>
+            <li class="order-list__list">Greater than Operator( &gt; )</li>
+            <li class="order-list__list">
+              Greater than or equal Operator( &gt;= )
+            </li>
+            <li class="order-list__list">Equal Operator( = )</li>
+            <li class="order-list__list">Not Equal Operator( != )</li>
+          </ol>
+
+          <h3 class="heading heading--secondary">Example</h3>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre"><code class="code">{Comparison Operators}</code>
+<code class="code"></code>
+<code class="code">PROGRAM comparisonOperator;</code>
+<code class="code">VAR</code>
+<code class="code">     a,b,c,d,e: INTEGER;</code>
+<code class="code">     x,y,z : BOOLEAN;</code>
+<code class="code">BEGIN</code>
+<code class="code">     a := 1;</code>
+<code class="code">     b := 5;</code>
+<code class="code">     c := 2;</code>
+<code class="code">     d := 10;</code>
+<code class="code"></code>
+<code class="code">     x := a > 2 and 2 < 3 or b > 4;</code>
+<code class="code">     y := b = 5;</code>
+<code class="code">     z := a >= 4 and c <= 3;</code>
+<code class="code"></code>
+<code class="code">     display('a:', a, 'b:', b);</code>
+<code class="code">     display('c:', c, 'd:', d);</code>
+<code class="code">     display('x:', x);</code>
+<code class="code">     display('y:', y);</code>
+<code class="code">     display('z:', z);</code>
+<code class="code">END.</code>
+</pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+
+          <h3 class="heading heading--secondary">5. Concatenation Operator</h3>
+          <p class="para">
+            Concatenation Operator is used to concatenate two strings. $ symbol
+            is used as concatenation operator. Below code example shows the
+            usage of concatenation operator
+          </p>
+
+          <h3 class="heading heading--secondary">Example</h3>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre"><code class="code">{ Concatenation Operator}</code>
+<code class="code"></code>
+<code class="code">PROGRAM concatenationOperator;</code>
+<code class="code">VAR</code>
+<code class="code">     firstname, lastname : string;</code>
+<code class="code"></code>
+<code class="code">BEGIN</code>
+<code class="code">     firstname := 'RV';</code>
+<code class="code">     lastname := 'COLLEGE';</code>
+<code class="code"></code>
+<code class="code">     display(firstname $ ' ' $ lastname);</code>
+<code class="code">END.</code>
+</pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+        </section>
+        <!-- SECTION OPERATOR END -->
+
+        <!-- OPERATOR PRECEDENCE START -->
+        <section
+          class="section section--operator-precedence"
+          id="operator-precedence"
+        >
+          <h1 class="heading heading--primary margin-bottom-small">
+            Operator Precedence
+          </h1>
+          <p class="para">
+            To evaluate the expressions there is a rule of precedence in
+            language. These precende rules guide the order in which these
+            operations are to be carried out.
+          </p>
+          <p class="para">
+            The operator precedence in language is listed below in the following
+            table. It is in the descending order (upper group has higher
+            precedence than the lower ones).
+          </p>
+
+          <div class="table">
+            <div class="table__child table__child--1">Operator</div>
+            <div class="table__child table__child--2">Meaning</div>
+            <div class="table__child table__child--3">( )</div>
+            <div class="table__child table__child--4">Parentheses</div>
+            <div class="table__child table__child--3">$</div>
+            <div class="table__child table__child--4">
+              Concatenation Operator
+            </div>
+            <div class="table__child table__child--5">+X, -X</div>
+            <div class="table__child table__child--6">
+              Unary Plus, Unary Minus
+            </div>
+            <div class="table__child table__child--7">*, DIV, /</div>
+            <div class="table__child table__child--8">
+              Multiplication, Integer Division, Real Division
+            </div>
+            <div class="table__child table__child--9">+, -</div>
+            <div class="table__child table__child--10">
+              Addition, Subtraction
+            </div>
+            <div class="table__child table__child--11">
+              =, !=, &lt;, &gt;, &lt;=, &gt;=
+            </div>
+            <div class="table__child table__child--12">
+              Comparison Operators
+            </div>
+            <div class="table__child table__child--13">AND</div>
+            <div class="table__child table__child--14">Logical AND</div>
+            <div class="table__child table__child--15">OR</div>
+            <div class="table__child table__child--16">Logical OR</div>
+          </div>
+        </section>
+        <!-- OPERATOR PRECEDENCE END -->
+
         <!-- SECTION IF STATEMENT START -->
-        <section class="section section-ifStatement" id="ifstatement">
+        <section class="section section-ifStatement section-1" id="ifstatement">
           <h1 class="heading heading--primary margin-bottom-small">
             If Statements
           </h1>
           <p class="para">
-            If statements are used if there is condition based evaluation is
-            required. Here first the condtion is checked and then its associated
-            code is executed.
+            If statements are used when there is requirement of condition based
+            evaluation. Here first the condtion is checked and then, only its
+            associated code block is executed.
           </p>
           <p class="para">There are 4 varieties of If statements</p>
           <ol class="order-list">
@@ -219,9 +546,50 @@
             <li class="order-list__list">if elseif elsif... else statement</li>
           </ol>
 
-          <div class="code-block margin-bottom-small">
-            <pre class="pre"><code class="code">isValid := True;</code>
-      <code class="code">isNew := False;</code></pre>
+          <p class="para">
+            Note that all the if statement varieties should be terminated with
+            ENDIF keyword;
+          </p>
+
+          <h3 class="heading heading--secondary">Syntax</h3>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre">
+<code class="code">IF &lt;condition-1&gt; THEN</code>
+<code class="code">     {statements to execute ...}</code>
+<code class="code">ELSEIF &lt;condition-2&gt; THEN</code>
+<code class="code">     {statements to execute ...}</code>
+<code class="code">ELSEIF &lt;condition-3&gt; THEN</code>
+<code class="code">     {statements to execute ...}</code>
+<code class="code">  .</code>
+<code class="code">  .</code>
+<code class="code">  .</code>
+<code class="code">ELSE</code>
+<code class="code">     {statements to execute ...}</code>
+<code class="code">ENDIF</code>
+</pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+
+          <h3 class="heading heading--secondary">Example</h3>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre"><code class="code">{ VOTER }</code>
+<code class="code"></code>
+<code class="code">PROGRAM voting;</code>
+<code class="code">VAR</code>
+<code class="code">     age : INTEGER;</code>
+<code class="code">     hasCriminalRecord : BOOLEAN;</code>
+<code class="code"></code>
+<code class="code">BEGIN</code>
+<code class="code">     age := 19;</code>
+<code class="code">     hasCriminalRecord := False;</code>
+<code class="code"></code>
+<code class="code">     IF age >= 18 and hasCriminalRecord = False THEN</code>
+<code class="code">         display('Eligible for Voting');</code>
+<code class="code">     ELSE</code>
+<code class="code">         display('Not Eligible');</code>
+<code class="code">     ENDIF</code>
+<code class="code">END.</code>
+</pre>
             <button class="btn-copy">Copy</button>
           </div>
         </section>
@@ -236,9 +604,27 @@
             else satatement present, then the else block will be executed once.
             Otherwise the statements after loop will be executed.
           </p>
+          <p class="para margin-bottom-small">
+            Note that else block will be executed even if the loop is terminated
+            with break statement.
+          </p>
           <p class="para">
             Below is the code example for using loop in program.
           </p>
+
+          <h3 class="heading heading--secondary">Syntax</h3>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre">
+<code class="code">LOOP IF &lt;condition&gt;</code>
+<code class="code">     {statements to execute ...}</code>
+<code class="code">ELSE</code>
+<code class="code">     {statements to execute ...}</code>
+<code class="code">ENDLOOP</code>
+</pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+
+          <h3 class="heading heading--secondary">Example</h3>
           <div class="code-block magin-bottom-small">
             <pre class="pre"><code class="code">PROGRAM loopExample;</code>
 <code class="code">VAR</code>
@@ -246,10 +632,15 @@
 <code class="code">     b : INTEGER;</code>
 <code class="code">BEGIN</code>
 <code class="code">     a := 0;</code>
-<code class="code">     LOOP IF (a < 5) THEN</code>
+<code class="code">     LOOP IF (a < 5)</code>
 <code class="code">         a := a + 1;</code>
+<code class="code">         display('Current value of a:', a);</code>
 <code class="code">     ELSE</code>
 <code class="code">         b := 1;</code>
+<code class="code">         display();</code>
+<code class="code">         display('Out of loop');</code>
+<code class="code">         display('Value of b:', b);</code>
+<code class="code">     ENDLOOP</code>
 <code class="code">END.</code>
 </pre>
             <button class="btn-copy">Copy</button>
