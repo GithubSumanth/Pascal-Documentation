@@ -21,7 +21,7 @@
     <!-- HEADER START -->
     <header class="header">
       <div class="logo-box">
-        <a href="#" class="logo-link"><h1 class="logo">Logo</h1></a>
+        <a href="#" class="logo-link"><h1 class="logo">Interpreter</h1></a>
       </div>
       <div class="nav">
         <ul class="container">
@@ -52,7 +52,12 @@
         </li>
         <li class="sidebar__list" data-id-name="variable">
           <a href="#" class="sidebar__link" data-id-name="variable"
-            >Variable Declaration</a
+            >Declaration Block</a
+          >
+        </li>
+        <li class="sidebar__list" data-id-name="compound">
+          <a href="#" class="sidebar__link" data-id-name="compound"
+            >Compound Statement Block</a
           >
         </li>
         <li class="sidebar__list" data-id-name="datatype">
@@ -84,8 +89,8 @@
         <li class="sidebar__list" data-id-name="loop">
           <a href="#" class="sidebar__link" data-id-name="loop">Loop</a>
         </li>
-        <li class="sidebar__list" data-id-name="examples">
-          <a href="#" class="sidebar__link" data-id-name="examples">Examples</a>
+        <li class="sidebar__list" data-id-name="example">
+          <a href="#" class="sidebar__link" data-id-name="example">Examples</a>
         </li>
       </ul>
       <!-- SIDEBAR END -->
@@ -115,8 +120,135 @@
           </div>
         </section>
         <!-- SECTION PROGRAM END -->
+        <!-- SECTION BLOCK START -->
+        <section class="section section--block" id="block">
+          <h1 class="heading heading--primary margin-bottom-small">Block</h1>
+          <p class="para">
+            There are two blocks in the Programming language. They are given
+            below.
+          </p>
+
+          <ol class="order-list">
+            <li class="order-list__list">Declaration Block</li>
+            <li class="order-list__list">Compound Statement Block</li>
+          </ol>
+
+          <p class="para">
+            A detailed discussion on each block is given in the next section.
+            Syntax for declaring both the blocks is shown here.
+          </p>
+          <h3 class="heading heading--secondary">Syntax</h3>
+          <div class="code-block margin-bottom-small">
+            <pre class="pre"><code class="code">PROGRAM block;</code>
+<code class="code"></code>
+<code class="code">{ Declaration Block }</code>
+<code class="code">VAR</code>
+<code class="code">     name : STRING;</code>
+<code class="code">     { All the variables are declared here }</code>
+<code class="code"></code>
+<code class="code">{ Compound Statement Block }</code>
+<code class="code">BEGIN</code>
+<code class="code">     name := 'Henry';</code>
+<code class="code">     { Other code statements comes here }</code>
+<code class="code">END.</code></pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+        </section>
+        <!-- SECTION BLOCK END -->
+
+        <!-- SECTION VARIABLE DECLARATION START -->
+        <section class="section section--variable" id="variable">
+          <h1 class="heading heading--primary margin-bottom-small">
+            Declaration Block
+          </h1>
+          <p class="para">
+            Variable declaration should be done at the top just after defining
+            the program name. Variable Declaration starts with keyword VAR.
+            Syntax for variable declaration is shown below. This block is
+            optional i.e a program can be written without declaration block if
+            there are no variables used.
+          </p>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre"><code class="code">VAR</code>
+<code class="code">    &lt;variable_name_1&gt; : &lt;type_1&gt;;</code>
+<code class="code">    &lt;variable_name_2&gt;, &lt;variable_name_3&gt; : &lt;type_2&gt;;</code></pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+          <h3 class="heading heading--secondary">Example</h3>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre"><code class="code">PROGRAM varDecl;</code>
+<code class="code">VAR</code>
+<code class="code">     a : INTEGER;</code>
+<code class="code">     b : REAL;</code>
+<code class="code">BEGIN</code>
+<code class="code">     a := 2;</code>
+<code class="code">     b := 3.00;</code>
+<code class="code">     display('a:', a);</code>
+<code class="code">     display('b:', b)</code>
+<code class="code">END.</code>
+</pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+        </section>
+        <!-- SECTION VARIABLE DECLARATION END -->
+
+        <!-- SECTION COMPOOUND BLOCK START -->
+        <section class="section section--compound" id="compound">
+          <h1 class="heading heading--primary margin-bottom-small">
+            Compound Statement Block
+          </h1>
+          <p class="para">
+            Unlike declaration block compound statement block is not optional.
+            There should be atleast one compound statement block within the
+            program. A coumpound statement block starts with BEGIN keyword and
+            ends with END keyword. A compound statement block can have nested
+            compund statement blocks. Compound statement block can also be
+            empty.
+          </p>
+
+          <p class="para">
+            Compound statement block must be written after the declaration
+            block.
+          </p>
+          <h3 class="heading heading--secondary">Syntax</h3>
+          <div class="code-block" id="code-program">
+            <pre class="pre"><code class="code">{ Compound Statement Block }</code>
+<code class="code">BEGIN</code>
+<code class="code">    { Code statements ... }</code>
+<code class="code">END.</code></pre>
+
+<h3 class="heading heading--secondary">Example 1</h3>
+          <div class="code-block margin-bottom-small">
+            <pre class="pre"><code class="code">PROGRAM compoundStatementBlock;</code>
+<code class="code"></code>
+<code class="code">{ Declaration Block is optional }</code>
+<code class="code"></code>
+<code class="code">{ Compound Statement Block }</code>
+<code class="code">BEGIN</code>
+<code class="code">     { Compound statement block can be empty }</code>
+<code class="code">END.</code></pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+
+          <h3 class="heading heading--secondary">Example 2</h3>
+          <div class="code-block margin-bottom-small">
+            <pre class="pre"><code class="code">PROGRAM nestedCompoundStatementBlock;</code>
+<code class="code"></code>
+<code class="code">{ Declaration Block is optional }</code>
+<code class="code"></code>
+<code class="code">{ Compound Statement Block }</code>
+<code class="code">BEGIN</code>
+<code class="code">    BEIGN</code>
+<code class="code">       { ... }</code>
+<code class="code">    END;</code>
+<code class="code">END.</code></pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+        </section>
+        </section>
+        <!-- SECTION COMPOUND BLOCK END -->
         <!-- SECTION DATA TYPE START-->
-        <section class="section section--program" id="datatype">
+        <section class="section section--datatype" id="datatype">
           <h1 class="heading heading--primary margin-bottom-small">
             Data types
           </h1>
@@ -217,40 +349,6 @@
           </div>
         </section>
         <!-- SECTION DATA TYPE END -->
-
-        <!-- SECTION VARIABLE DECLARATION START -->
-        <section class="section section--variable" id="variable">
-          <h1 class="heading heading--primary margin-bottom-small">
-            Variable Declaration
-          </h1>
-          <p class="para">
-            Variable declaration should be done at the top just after defining
-            the program name. Variable Declaration starts with keyword VAR.
-            Syntax for variable declaration is shown below.
-          </p>
-          <div class="code-block magin-bottom-small">
-            <pre class="pre"><code class="code">VAR</code>
-<code class="code">    &lt;variable_name_1&gt; : &lt;type_1&gt;;</code>
-<code class="code">    &lt;variable_name_2&gt;, &lt;variable_name_3&gt; : &lt;type_2&gt;;</code></pre>
-            <button class="btn-copy">Copy</button>
-          </div>
-          <h3 class="heading heading--secondary">Example</h3>
-          <div class="code-block magin-bottom-small">
-            <pre class="pre"><code class="code">PROGRAM varDecl;</code>
-<code class="code">VAR</code>
-<code class="code">     a : INTEGER;</code>
-<code class="code">     b : REAL;</code>
-<code class="code">BEGIN</code>
-<code class="code">     a := 2;</code>
-<code class="code">     b := 3.00;</code>
-<code class="code">     display('a:', a);</code>
-<code class="code">     display('b:', b)</code>
-<code class="code">END.</code>
-</pre>
-            <button class="btn-copy">Copy</button>
-          </div>
-        </section>
-        <!-- SECTION VARIABLE DECLARATION END -->
 
         <!-- SECTION OPERATOR START -->
         <section class="section section--operator" id="operator">
@@ -647,6 +745,126 @@
           </div>
         </section>
         <!-- SECTION LOOP END -->
+
+        <section class="section section--example" id="example">
+          <h1 class="heading heading--primary margin-bottom-small">
+            Example Codes
+          </h1>
+          <p class="para">
+            Below are some of the example codes written in the current programming language.
+          </p>
+
+          <h3 class="heading heading--secondary">Example 1: Print Numbers from 1 - 20.</h3>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre"><code class="code">{ Displaying numbers from 1 to 20 }</code>
+<code class="code">PROGRAM main;</code>
+<code class="code">VAR</code>
+<code class="code">     range : INTEGER;</code>
+<code class="code">     count : INTEGER;</code>
+<code class="code">BEGIN</code>
+<code class="code">     range := 20;</code>
+<code class="code">     count := 0;</code>
+<code class="code"></code>
+<code class="code">     LOOP IF (count < range)</code>
+<code class="code">          count := count + 1;</code>
+<code class="code">          display('Number is :', count);</code>
+<code class="code">     ENDLOOP</code>
+<code class="code">END.</code>
+</pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+
+          <h3 class="heading heading--secondary">Example 2: Factorial of 10</h3>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre"><code class="code">{ Displaying numbers from 1 to 20 }</code>
+<code class="code">PROGRAM factorial;</code>
+<code class="code">VAR</code>
+<code class="code">     counter, fact : INTEGER;</code>
+<code class="code"></code>
+<code class="code">BEGIN</code>
+<code class="code">     counter := 1;</code>
+<code class="code">     fact := 1;</code>
+<code class="code"></code>
+<code class="code">     LOOP IF (counter < 10)</code>
+<code class="code">          fact := fact * counter;</code>
+<code class="code">          counter := counter + 1;</code>
+<code class="code">     ENDLOOP</code>
+<code class="code"></code>
+<code class="code">     display('factorial of 10 :',fact)</code>
+<code class="code">END.</code>
+</pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+
+          <h3 class="heading heading--secondary">Example 3: Simple Interest</h3>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre"><code class="code">{ Simple Interest }</code>
+<code class="code">PROGRAM simpleInterest ;</code>
+<code class="code">VAR</code>
+<code class="code">     principle : REAL;</code>
+<code class="code">     rate : REAL;</code>
+<code class="code">     year : INTEGER;</code>
+<code class="code">     amount : REAL;</code>
+<code class="code">     si : REAL;</code>
+<code class="code"></code>
+<code class="code">BEGIN</code>
+<code class="code">     principle := 10000;</code>
+<code class="code">     rate := 5;</code>
+<code class="code">     year := 1;</code>
+<code class="code"></code>
+<code class="code">     si := principle * year * rate / 100;</code>
+<code class="code"></code>
+<code class="code">     amount := principle + si;</code>
+<code class="code"></code>
+<code class="code">     display('Principle :', principle);</code>
+<code class="code">     display('Rate :', rate);</code>
+<code class="code">     display('Time :', year);</code>
+<code class="code"></code>
+<code class="code">     display('Simple interest :', si);</code>
+<code class="code">     display('Amount :', amount)</code>
+<code class="code">END.</code>
+</pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+
+          <h3 class="heading heading--secondary">Example 4: Fibonacci Series</h3>
+          <div class="code-block magin-bottom-small">
+            <pre class="pre"><code class="code">{ Fibonacci Series }</code>
+<code class="code">PROGRAM fibonacciSeries ;</code>
+<code class="code">VAR</code>
+<code class="code">     terms, count : INTEGER;</code>
+<code class="code">     prevResult, prevPrevResult : INTEGER;</code>
+<code class="code">     currentResult : INTEGER;</code>
+<code class="code"></code>
+<code class="code">BEGIN</code>
+<code class="code">     terms := 10;</code>
+<code class="code">     count := 2;</code>
+<code class="code">     display('Fibonacci Series:', terms, 'terms');</code>
+<code class="code"></code>
+<code class="code">     IF (terms = 1) THEN</code>
+<code class="code">           display('0');</code>
+<code class="code">     ELSEIF (terms > 1) THEN</code>
+<code class="code">           display('0');</code>
+<code class="code">           display('1');</code>
+<code class="code">           prevResult := 1;</code>
+<code class="code">           prevPrevResult := 0;</code>
+<code class="code"></code>
+<code class="code">           LOOP IF (count < terms)</code>
+<code class="code">                 currentResult := prevResult + prevPrevResult;</code>
+<code class="code">                 prevPrevResult := prevResult;</code>
+<code class="code">                 prevResult := currentResult;</code>
+<code class="code">                 count := count + 1;</code>
+<code class="code">                 display(currentResult);</code>
+<code class="code">           ENDLOOP;</code>
+<code class="code">      ENDIF</code>
+<code class="code">END.</code>
+</pre>
+            <button class="btn-copy">Copy</button>
+          </div>
+
+        </section>
+
+
       </div>
       <!-- MAIN BLOCK END -->
     </main>
